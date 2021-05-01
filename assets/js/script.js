@@ -6,7 +6,6 @@ var newwws = [
     news2,
     news3,
     news4,
-    news5,
 ]
 
 var getInfo = function(country) {
