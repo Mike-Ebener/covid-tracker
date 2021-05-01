@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--html layout-->
-    <!--html layout-->
+<!--html layout-->
 
 <head>
     <meta charset="UTF-8">
@@ -12,15 +12,16 @@
     <!--CSS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.css" media="screen,projection" />
-    <link href="./assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="./assets/css/style.css" type="text/css" rel="stylesheet"
+        media="screen,projection" />
 </head>
 
 <body>
-    <!--navbar-->
     <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-            <a href="#" class="brand-logo">Logo</a>
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">COVID-19 Tracker</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="sass.html">Countries</a></li>
                 <li><a href="badges.html">News</a></li>
@@ -29,193 +30,165 @@
         </div>
     </nav>
 
-
-    <!--container for US map-->
     <div class="container">
-        <div class="col s12">
-            <img src="assets/Document.png" alt="logo">
+        <div class="row">
+            <div class="input-field col s4">
+                <select>
+                    <option value="" disabled selected>Choose a country</option>
+                    <option value="ar">Argentina</option>
+                    <option value="au">Australia</option>
+                    <option value="at">Austria</option>
+                    <option value="be">Belgium</option>
+                    <option value="br">Brazil</option>
+                    <option value="bg">Bulgaria</option>
+                    <option value="ca">Canada</option>
+                    <option value="cn">China</option>
+                    <option value="co">Colombia</option>
+                    <option value="cz">Czech Republic</option>
+                    <option value="eg">Egypt</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="gr">Greece</option>
+                    <option value="hk">Hong Kong</option>
+                    <option value="hu">Hungary</option>
+                    <option value="in">India</option>
+                    <option value="id">Indonesia</option>
+                    <option value="ie">Ireland</option>
+                    <option value="il">Israel</option>
+                    <option value="it">Italy</option>
+                    <option value="jp">Japan</option>
+                    <option value="lv">Latvia</option>
+                    <option value="lt">Lithuania</option>
+                    <option value="my">Malaysia</option>
+                    <option value="mx">Mexico</option>
+                    <option value="ma">Morocco</option>
+                    <option value="nl">Netherlands</option>
+                    <option value="nz">New Zealand</option>
+                    <option value="ng">Nigeria</option>
+                    <option value="no">Norway</option>
+                    <option value="ph">Philippines</option>
+                    <option value="pl">Poland</option>
+                    <option value="pt">Portugal</option>
+                    <option value="ro">Romania</option>
+                    <option value="sa">Saudi Arabia</option>
+                    <option value="rs">Serbia</option>
+                    <option value="sg">Singapore</option>
+                    <option value="sk">Slovakia</option>
+                    <option value="si">Slovenia</option>
+                    <option value="za">South Africa</option>
+                    <option value="kr">South Korea</option>
+                    <option value="se">Sweden</option>
+                    <option value="ch">Switzerland</option>
+                    <option value="tw">Taiwan</option>
+                    <option value="th">Thailand</option>
+                    <option value="tr">Turkey</option>
+                    <option value="ua">Ukraine</option>
+                    <option value="ae">United Arab Emirates</option>
+                    <option value="gb">United Kingdom</option>
+                    <option value="us">United States</option>
+                    <option value="ve">Venezuela</option>
+                </select>
+            </div>
         </div>
+
+        <!--container for covid stats-->
+        <div id="stats-container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula
+            sem pulvinar odio sodales, pellentesque interdum purus dictum. Etiam eu
+            fringilla turpis, eu semper augue. In enim massa, sollicitudin ultricies
+            convallis non, rhoncus in neque. Phasellus fringilla ipsum quis dui rutrum
+            viverra. Curabitur vitae viverra nisi. Fusce orci mi, euismod ut diam nec,
+            efficitur vulputate leo. Integer faucibus nulla eget neque semper malesuada.
+            Vivamus elementum quam ac nunc interdum, sed elementum ipsum egestas. Integer
+            imperdiet auctor dui, sed posuere nibh scelerisque eu. Proin nisl neque, volutpat in leo
+            pharetra, porttitor aliquet enim. Nunc in sem congue neque iaculis posuere. Mauris
+            finibus elementum placerat. Nullam efficitur porta orci, vitae interdum mi convallis
+            semper. Sed non interdum libero, non iaculis nisl. Donec tristique felis quis eleifend
+            euismod. Vestibulum nec metus vitae dui convallis posuere. Nam dictum vel sapien eget
+            pellentesque. Morbi vel metus nec purus iaculis congue. Cras vulputate efficitur semper.
+            Fusce aliquet auctor nunc ac hendrerit. Interdum et malesuada fames ac ante ipsum primis
+            in faucibus. Sed vitae nisi ac lacus dapibus varius. Donec mollis quam vel magna pretium
+            varius id vitae dui.
+        </div>
+
     </div>
 
-    <div id="select">
-        <select>
-            <option value="ar">Argentina</option>
-            <option value="au">Australia</option>
-            <option value="at">Austria</option>
-            <option value="be">Belgium</option>
-            <option value="br">Brazil</option>
-            <option value="bg">Bulgaria</option>
-            <option value="ca">Canada</option>
-            <option value="cn">China</option>
-            <option value="co">Colombia</option>
-            <option value="cz">Czech Republic</option>
-            <option value="eg">Egypt</option>
-            <option value="fr">France</option>
-            <option value="de">Germany</option>
-            <option value="gr">Greece</option>
-            <option value="hk">Hong Kong</option>
-            <option value="hu">Hungary</option>
-            <option value="in">India</option>
-            <option value="id">Indonesia</option>
-            <option value="ie">Ireland</option>
-            <option value="il">Israel</option>
-            <option value="it">Italy</option>
-            <option value="jp">Japan</option>
-            <option value="lv">Latvia</option>
-            <option value="lt">Lithuania</option>
-            <option value="my">Malaysia</option>
-            <option value="mx">Mexico</option>
-            <option value="ma">Morocco</option>
-            <option value="nl">Netherlands</option>
-            <option value="nz">New Zealand</option>
-            <option value="ng">Nigeria</option>
-            <option value="no">Norway</option>
-            <option value="ph">Philippines</option>
-            <option value="pl">Poland</option>
-            <option value="pt">Portugal</option>
-            <option value="ro">Romania</option>
-            <option value="sa">Saudi Arabia</option>
-            <option value="rs">Serbia</option>
-            <option value="sg">Singapore</option>
-            <option value="sk">Slovakia</option>
-            <option value="si">Slovenia</option>
-            <option value="za">South Africa</option>
-            <option value="kr">South Korea</option>
-            <option value="se">Sweden</option>
-            <option value="ch">Switzerland</option>
-            <option value="tw">Taiwan</option>
-            <option value="th">Thailand</option>
-            <option value="tr">Turkey</option>
-            <option value="ua">Ukraine</option>
-            <option value="ae">United Arab Emirates</option>
-            <option value="gb">United Kingdom</option>
-            <option value="us">United States</option>
-            <option value="ve">Venezuela</option>
-        </select>
-    </div>
     <!--container for news article cards-->
-    <div class="new1">
-        <div class="section">
+    <div class="container">
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s6 m3">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
+                    </h2>
+                    <h5 class="center">COVID NEWS 1</h5>
+
+                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                </div>
+            </div>
+
+            <div class="col s6 m3">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
+                    </h2>
+                    <h5 class="center">COVID NEWS 2</h5>
+
+                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                </div>
+            </div>
+
+            <div class="col s6 m3">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
+                    </h2>
+                    <h5 class="center">COVID NEWS 3</h5>
+
+                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                </div>
+            </div>
+
+            <div class="col s6 m3">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
+                    </h2>
+                    <h5 class="center">COVID NEWS 4</h5>
+
+                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="page-footer light-blue lighten-1">
+        <div class="container">
             <div class="row">
-                <div class="col s12 m4">
-                    <h2 class="news-title"> News Title Here! 1</h2>
-                    <p class="news"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <button class="link-btn"> Button link to article</button>
+                <div class="col l6 s12">
+                    <h5 class="white-text">Team Overview</h5>
+                    <p class="grey-text text-lighten-4">
+                        We are a team of students in the Berkeley Software Development Bootcamp. This site leverages HTML, CSS, jQuery, and Materialize.
+                    </p>
+                </div>
+                <div class="col l6 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="https://www.linkedin.com/in/mike-ebener-6b08557b" target="_blank">Mike Ebener</a></li>
+                        <li><a class="white-text" href="https://www.linkedin.com/in/ben-gerner-790683208" target="_blank">Ben Gerner</a></li>
+                        <li><a class="white-text" href="https://www.linkedin.com/in/obinna-ezeka-000734206" target="_blank">Obinna Ezeka</a></li>
+                        <li><a class="white-text" href="https://www.linkedin.com/in/jefffollestad" target="_blank">Jeff Follestad</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="news2">
-        <div class="section">
-            <div class="row">
-                <div class="col s12 m4">
-                    <h2 class="news-title"> News Title Here! 2</h2>
-                    <p class="news"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <button class="link-btn"> Button link to article</button>
-                </div>
-            </div>
+        <div class="footer-copyright">
+            <div class="container orange-text text-lighten-3">Berkeley Dev Bootcamp 2021</div>
         </div>
-    </div>
-    <div class="new3">
-        <div class="section">
-            <div class="row">
-                <div class="col s12 m4">
-                    <h2 class="news-title"> News Title Here! 3</h2>
-                    <p class="news"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <button class="link-btn"> Button link to article</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="new4r">
-        <div class="section">
-            <div class="row">
-                <div class="col s12 m4">
-                    <h2 class="news-title"> News Title Here! 4</h2>
-                    <p class="news"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    <button class="link-btn"> Button link to article</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="new5">
-        <div class="section">
+    </footer>
 
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">COVID NEWS 1</h5>
-
-                        <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">COVID NEWS 2</h5>
-
-                        <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">COVID NEWS 3</h5>
-
-                        <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
-                    </div>
-                </div>
-                <br><br>
-            </div>
-
-            <!--footer-->
-            <footer class="page-footer light-blue lighten-1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col l6 s12">
-                            <h5 class="white-text">Team Overview</h5>
-                            <p class="grey-text text-lighten-4">We are a team of college students working on this
-                                project like it's our full time job. Any amount would help support and continue
-                                development on this project and is greatly appreciated.</p>
-
-
-                        </div>
-                        <div class="col l3 s12">
-                            <h5 class="white-text">Settings</h5>
-                            <ul>
-                                <li><a class="white-text" href="#!">Link 1</a></li>
-                                <li><a class="white-text" href="#!">Link 2</a></li>
-                                <li><a class="white-text" href="#!">Link 3</a></li>
-                                <li><a class="white-text" href="#!">Link 4</a></li>
-                            </ul>
-                        </div>
-                        <div class="col l3 s12">
-                            <h5 class="white-text">Connect</h5>
-                            <ul>
-                                <li><a class="white-text" href="#!">Link 1</a></li>
-                                <li><a class="white-text" href="#!">Link 2</a></li>
-                                <li><a class="white-text" href="#!">Link 3</a></li>
-                                <li><a class="white-text" href="#!">Link 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-copyright">
-                    <div class="container">
-                        Built with <a class="orange-text text-lighten-3"
-                            href="http://materializecss.com">Materialize</a>
-                    </div>
-                </div>
-            </footer>
-
-            <!--  Scripts-->
-            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-            <script src="js/materialize.js"></script>
-            <script src="./assets/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 
