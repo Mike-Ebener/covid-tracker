@@ -27,43 +27,43 @@ function getInfo(country) {
 
 //confirmed cases function
 
-function getConfirmed (country) {
+function getConfirmed(country) {
     const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-fetch(covidUrl).then(function(confirmedCases) {
-    if (response.ok) {
-        response.josn().then(function(Confirmed) {
-         console.log(Confirmed);
+    fetch(covidUrl).then(function (confirmedCases) {
+        if (response.ok) {
+            response.josn().then(function (Confirmed) {
+                console.log(Confirmed);
+            });
+        }
     });
-}
-});
 };
 
 
 // confirmed deaths function
 
-function getDeaths (country) {
+function getDeaths(country) {
     const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-fetch(covidUrl).then(function(confirmedDeaths) {
-    if (response.ok) {
-        response.josn().then(function(Deaths) {
-         console.log(Deaths);
+    fetch(covidUrl).then(function (confirmedDeaths) {
+        if (response.ok) {
+            response.josn().then(function (Deaths) {
+                console.log(Deaths);
+            });
+        }
     });
-}
-});
 };
 
 
 // confirmed recovered function
 
-function getRecovered (country) {
+function getRecovered(country) {
     const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-fetch(covidUrl).then(function(confirmedRecovered) {
-    if (response.ok) {
-        response.josn().then(function(Recovered) {
-         console.log(Recovered);
+    fetch(covidUrl).then(function (confirmedRecovered) {
+        if (response.ok) {
+            response.josn().then(function (Recovered) {
+                console.log(Recovered);
+            });
+        }
     });
-}
-});
 };
 
 
