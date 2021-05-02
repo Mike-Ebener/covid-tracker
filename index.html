@@ -92,24 +92,25 @@
         </div>
 
         <!--container for covid stats-->
-        <div id="stats-container">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula
-            sem pulvinar odio sodales, pellentesque interdum purus dictum. Etiam eu
-            fringilla turpis, eu semper augue. In enim massa, sollicitudin ultricies
-            convallis non, rhoncus in neque. Phasellus fringilla ipsum quis dui rutrum
-            viverra. Curabitur vitae viverra nisi. Fusce orci mi, euismod ut diam nec,
-            efficitur vulputate leo. Integer faucibus nulla eget neque semper malesuada.
-            Vivamus elementum quam ac nunc interdum, sed elementum ipsum egestas. Integer
-            imperdiet auctor dui, sed posuere nibh scelerisque eu. Proin nisl neque, volutpat in leo
-            pharetra, porttitor aliquet enim. Nunc in sem congue neque iaculis posuere. Mauris
-            finibus elementum placerat. Nullam efficitur porta orci, vitae interdum mi convallis
-            semper. Sed non interdum libero, non iaculis nisl. Donec tristique felis quis eleifend
-            euismod. Vestibulum nec metus vitae dui convallis posuere. Nam dictum vel sapien eget
-            pellentesque. Morbi vel metus nec purus iaculis congue. Cras vulputate efficitur semper.
-            Fusce aliquet auctor nunc ac hendrerit. Interdum et malesuada fames ac ante ipsum primis
-            in faucibus. Sed vitae nisi ac lacus dapibus varius. Donec mollis quam vel magna pretium
-            varius id vitae dui.
-        </div>
+        <main class="page-content" id="page-content">
+            <!-- Tasks To Do -->
+            <section class="stats-list-wrapper">
+              <h2 class="list-title">Confirmed Cases</h2>
+              <ul class="stat-list" id="stat-to-do"></ul>
+            </section>
+        
+            <!-- Tasks In Progress -->
+            <section class="stat-list-wrapper">
+              <h2 class="list-title">Total Deaths</h2>
+              <ul class="stat-list" id="stat-in-progress"></ul>
+            </section>
+        
+            <!-- Tasks Completed -->
+            <section class="stat-list-wrapper">
+              <h2 class="list-title">Total Recovered</h2>
+              <ul class="stat-list" id="stat-completed"></ul>
+            </section>
+          </main>
 
     </div>
 

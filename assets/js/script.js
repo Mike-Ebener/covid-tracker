@@ -23,9 +23,57 @@ function getInfo(country) {
     });
 }
 
+// Covid API starter
+
+//confirmed cases function
+
+function getConfirmed (country) {
+    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
+fetch(covidUrl).then(function(confirmedCases) {
+    if (response.ok) {
+        response.josn().then(function(Confirmed) {
+         console.log(Confirmed);
+    });
+}
+});
+};
+
+
+// confirmed deaths function
+
+function getDeaths (country) {
+    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
+fetch(covidUrl).then(function(confirmedDeaths) {
+    if (response.ok) {
+        response.josn().then(function(Deaths) {
+         console.log(Deaths);
+    });
+}
+});
+};
+
+
+// confirmed recovered function
+
+function getRecovered (country) {
+    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
+fetch(covidUrl).then(function(confirmedRecovered) {
+    if (response.ok) {
+        response.josn().then(function(Recovered) {
+         console.log(Recovered);
+    });
+}
+});
+};
+
+
 $(document).ready(function () {
     // Initializes select elements via Materialize.
     $('select').formSelect();
     // TOOD: Provide different default country?
     getInfo('US');
 });
+
+
+// Covid API and access key if needed
+// https://api.covid19api.com/summary/?access_key=37853424-f773-4a9c-99f1-89652b2f5b81
