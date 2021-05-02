@@ -89,29 +89,37 @@
             </div>
         </div>
 
-        <!--container for covid stats-->
-        <main class="page-content" id="page-content">
-            <!-- Tasks To Do -->
-            <section class="stats-list-wrapper">
-                <h2 class="list-title">Confirmed Cases</h2>
-                <ul class="stat-list" id="stat-to-do"></ul>
-            </section>
-
-            <!-- Tasks In Progress -->
-            <section class="stat-list-wrapper">
-                <h2 class="list-title">Total Deaths</h2>
-                <ul class="stat-list" id="stat-in-progress"></ul>
-            </section>
-
-            <!-- Tasks Completed -->
-            <section class="stat-list-wrapper">
-                <h2 class="list-title">Total Recovered</h2>
-                <ul class="stat-list" id="stat-completed"></ul>
-            </section>
-        </main>
-
     </div>
 
+    <!--container for covid stats -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col s6 m4">
+                <div class="stats-block">
+                    <h5 class="center">CONFIRMED</h5>
+
+                    <p class="light center" id="confirmed-number">Loading…</p>
+                </div>
+            </div>
+
+            <div class="col s6 m4">
+                <div class="stats-block">
+                    <h5 class="center">DEATHS</h5>
+
+                    <p class="light center" id="dead-number">Loading…</p>
+                </div>
+            </div>
+
+            <div class="col s6 m4">
+                <div class="stats-block">
+                    <h5 class="center">RECOVERED</h5>
+
+                    <p class="light center" id="recovered-number">Loading…</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!--container for news article cards-->

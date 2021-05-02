@@ -22,14 +22,22 @@ function getNews(country) {
 /** confirmed cases function */
 function getConfirmed(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
-        console.log(`Confirmed cases response for ${country}: ${response}`);
+        var sumOfConfirmed = 0;
+        for(var i = 0; i < response.length; i++) {
+            sumOfConfirmed += response[i].Confirmed;
+        }
+        $("#confirmed-number").text(sumOfConfirmed.toLocaleString());
     });
 }
 
 /** confirmed deaths function */
 function getDeaths(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
-        console.log(`Deaths response for ${country}: ${response}`);
+        var sumOfDeaths = 0;
+        for(var i = 0; i < response.length; i++) {
+            sumOfDeaths += response[i].Deaths;
+        }
+        $("#dead-number").text(sumOfDeaths.toLocaleString());
     });
 };
 
@@ -37,7 +45,11 @@ function getDeaths(country) {
 /** confirmed recovered function */
 function getRecovered(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/recovered', (response) => {
-        console.log(`Recovered response for ${country}: ${response}`);
+        var sumOfRecovered = 0;
+        for(var i = 0; i < response.length; i++) {
+            sumOfRecovered += response[i].Recovered;
+        }
+        $("#recovered-number").text(sumOfRecovered.toLocaleString());
     });
 };
 
@@ -45,6 +57,9 @@ function onCountryDropdownSelection() {
     const countryCode = $(this).val();
     console.log(`Country selected: ${countryCode}`);
     getNews(countryCode);
+    getConfirmed(countryCode);
+    getDeaths(countryCode);
+    getRecovered(countryCode);
 }
 
 $(document).ready(function () {
