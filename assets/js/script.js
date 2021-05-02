@@ -1,71 +1,45 @@
-const apiKey = "be3c3658dbb343423bac4e9c46b209e9";
+const newsApiKey = "be3c3658dbb343423bac4e9c46b209e9";
 
 function getInfo(country) {
     const newsUrl = "http://api.mediastack.com/v1/news" +
-        "?access_key=" + apiKey +
+        "?access_key=" + newsApiKey +
         "&countries=" + country +
         "&limit=5&languages=en,-ar,-zh,-de,-it,-ru,-nl,-es,-fr,-no,-pt";
-    fetch(newsUrl).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (newsData) {
-                console.log(newsData);
-                // clear html elements where news data will appear
-                for (let i = 0; i < newsData.length; i++) {
-                    // create html elements to be appended
-                    // add classes to newly created html elements
-                    // add attributes to newly created html elements ()
-                }
-            })
-        } else {
-            // TODO show error on the webpage instead of a alert?
-            alert("Failed to get news!");
+
+    makeApiRequest(newsUrl, (response) => {
+        console.log(response);
+        // clear html elements where news data will appear
+        for (let i = 0; i < response.length; i++) {
+            // create html elements to be appended
+            // add classes to newly created html elements
+            // add attributes to newly created html elements ()
         }
     });
 }
 
 // Covid API starter
 
-//confirmed cases function
-
+/** confirmed cases function */
 function getConfirmed(country) {
-    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-    fetch(covidUrl).then(function (confirmedCases) {
-        if (response.ok) {
-            response.josn().then(function (Confirmed) {
-                console.log(Confirmed);
-            });
-        }
+    makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
+        console.log(`Confirmed cases response for ${country}: ${response}`);
     });
-};
+}
 
-
-// confirmed deaths function
-
+/** confirmed deaths function */
 function getDeaths(country) {
-    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-    fetch(covidUrl).then(function (confirmedDeaths) {
-        if (response.ok) {
-            response.josn().then(function (Deaths) {
-                console.log(Deaths);
-            });
-        }
+    makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
+        console.log(`Deaths response for ${country}: ${response}`);
     });
 };
 
 
-// confirmed recovered function
-
+/** confirmed recovered function */
 function getRecovered(country) {
-    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-    fetch(covidUrl).then(function (confirmedRecovered) {
-        if (response.ok) {
-            response.josn().then(function (Recovered) {
-                console.log(Recovered);
-            });
-        }
+    makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/recovered', (response) => {
+        console.log(`Recovered response for ${country}: ${response}`);
     });
 };
-
 
 $(document).ready(function () {
     // Initializes select elements via Materialize.
