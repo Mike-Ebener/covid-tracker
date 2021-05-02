@@ -1,6 +1,6 @@
 const newsApiKey = "be3c3658dbb343423bac4e9c46b209e9";
 
-function getInfo(country) {
+function getNews(country) {
     const newsUrl = "http://api.mediastack.com/v1/news" +
         "?access_key=" + newsApiKey +
         "&countries=" + country +
@@ -41,9 +41,15 @@ function getRecovered(country) {
     });
 };
 
+function onCountryDropdownSelection() {
+    const countryCode = $(this).val();
+    console.log(`Country selected: ${countryCode}`);
+    getNews(countryCode);
+}
+
 $(document).ready(function () {
     // Initializes select elements via Materialize.
-    $('select').formSelect();
-    // TOOD: Provide different default country?
-    getInfo('US');
+    let countryDropdown = $("select");
+    countryDropdown.formSelect();
+    countryDropdown.change(onCountryDropdownSelection);
 });
