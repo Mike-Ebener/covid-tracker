@@ -1,75 +1,70 @@
-const apiKey = "be3c3658dbb343423bac4e9c46b209e9";
+const newsApiKey = "be3c3658dbb343423bac4e9c46b209e9";
 
-function getInfo(country) {
+function getNews(country) {
     const newsUrl = "http://api.mediastack.com/v1/news" +
-        "?access_key=" + apiKey +
+        "?access_key=" + newsApiKey +
         "&countries=" + country +
         "&limit=5&languages=en,-ar,-zh,-de,-it,-ru,-nl,-es,-fr,-no,-pt";
-    fetch(newsUrl).then(function (response) {
-        if (response.ok) {
-            response.json().then(function (newsData) {
-                console.log(newsData);
-                // clear html elements where news data will appear
-                for (let i = 0; i < newsData.length; i++) {
-                    // create html elements to be appended
-                    // add classes to newly created html elements
-                    // add attributes to newly created html elements ()
-                }
-            })
-        } else {
-            // TODO show error on the webpage instead of a alert?
-            alert("Failed to get news!");
+
+    makeApiRequest(newsUrl, (response) => {
+        console.log(response);
+        // clear html elements where news data will appear
+        for (let i = 0; i < response.length; i++) {
+            // create html elements to be appended
+            // add classes to newly created html elements
+            // add attributes to newly created html elements ()
         }
     });
 }
 
 // Covid API starter
 
-//confirmed cases function
-
-function getConfirmed (country) {
-    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-fetch(covidUrl).then(function(confirmedCases) {
-    if (response.ok) {
-        response.josn().then(function(Confirmed) {
-         console.log(Confirmed);
+/** confirmed cases function */
+function getConfirmed(country) {
+    makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
+        var sumOfConfirmed = 0;
+        for(var i = 0; i < response.length; i++) {
+            sumOfConfirmed += response[i].Confirmed;
+        }
+        $("#confirmed-number").text(sumOfConfirmed.toLocaleString());
     });
 }
-});
+
+/** confirmed deaths function */
+function getDeaths(country) {
+    makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
+        var sumOfDeaths = 0;
+        for(var i = 0; i < response.length; i++) {
+            sumOfDeaths += response[i].Deaths;
+        }
+        $("#dead-number").text(sumOfDeaths.toLocaleString());
+    });
 };
 
 
-// confirmed deaths function
-
-function getDeaths (country) {
-    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-fetch(covidUrl).then(function(confirmedDeaths) {
-    if (response.ok) {
-        response.josn().then(function(Deaths) {
-         console.log(Deaths);
+/** confirmed recovered function */
+function getRecovered(country) {
+    makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/recovered', (response) => {
+        var sumOfRecovered = 0;
+        for(var i = 0; i < response.length; i++) {
+            sumOfRecovered += response[i].Recovered;
+        }
+        $("#recovered-number").text(sumOfRecovered.toLocaleString());
     });
-}
-});
 };
 
-
-// confirmed recovered function
-
-function getRecovered (country) {
-    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
-fetch(covidUrl).then(function(confirmedRecovered) {
-    if (response.ok) {
-        response.josn().then(function(Recovered) {
-         console.log(Recovered);
-    });
+function onCountryDropdownSelection() {
+    const countryCode = $(this).val();
+    console.log(`Country selected: ${countryCode}`);
+    getNews(countryCode);
+    getConfirmed(countryCode);
+    getDeaths(countryCode);
+    getRecovered(countryCode);
 }
-});
-};
-
 
 $(document).ready(function () {
     // Initializes select elements via Materialize.
-    $('select').formSelect();
-    // TOOD: Provide different default country?
-    getInfo('US');
+    let countryDropdown = $("select");
+    countryDropdown.formSelect();
+    countryDropdown.change(onCountryDropdownSelection);
 });
