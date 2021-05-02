@@ -23,6 +23,50 @@ function getInfo(country) {
     });
 }
 
+// Covid API starter
+
+//confirmed cases function
+
+function getConfirmed (country) {
+    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
+fetch(covidUrl).then(function(confirmedCases) {
+    if (response.ok) {
+        response.josn().then(function(Confirmed) {
+         console.log(Confirmed);
+    });
+}
+});
+};
+
+
+// confirmed deaths function
+
+function getDeaths (country) {
+    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
+fetch(covidUrl).then(function(confirmedDeaths) {
+    if (response.ok) {
+        response.josn().then(function(Deaths) {
+         console.log(Deaths);
+    });
+}
+});
+};
+
+
+// confirmed recovered function
+
+function getRecovered (country) {
+    const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
+fetch(covidUrl).then(function(confirmedRecovered) {
+    if (response.ok) {
+        response.josn().then(function(Recovered) {
+         console.log(Recovered);
+    });
+}
+});
+};
+
+
 $(document).ready(function () {
     // Initializes select elements via Materialize.
     $('select').formSelect();
