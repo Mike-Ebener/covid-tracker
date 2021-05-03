@@ -29,13 +29,37 @@ function getInfo(country) {
 
 function getConfirmed (country) {
     const covidUrl = 'https://api.covid19api.com/live/country/' + country + '/status/confirmed';
+    console.log(covidUrl);
 fetch(covidUrl).then(function(confirmedCases) {
-    if (response.ok) {
-        response.josn().then(function(Confirmed) {
-         console.log(Confirmed);
-    });
+    if (confirmedCases) {
+        // response.josn().then(function(Confirmed) {
+        confirmedCases.json().then(function(country){
+            console.log(country);
+
+            
+                
+                for(let i = 0; i < country.length; i++ ){
+                    let sum;
+                    sum += country[i].Confirmed;
+                   // check if variable is a string
+                    if(country[0].Province === ''){
+                        $('#stat-to-do').html('<li >' + country[0].Confirmed +'</li>');
+                    } else {
+                        $('#stat-to-do').html('<li>' +  +'</li>');
+                    }
+                    
+                }
+           
+              
+            
+
+            })
+
+          
+          
+    // });
 }
-});
+})
 };
 
 
@@ -72,4 +96,11 @@ $(document).ready(function () {
     $('select').formSelect();
     // TOOD: Provide different default country?
     getInfo('US');
+
+
+    $('#select-country').on('change', function(country){
+        // console.log(country.target.value);
+        getConfirmed(country.target.value)
+
+    });
 });
