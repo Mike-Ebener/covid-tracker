@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--html layout-->
-<!--html layout-->
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +14,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="./assets/css/style.css" type="text/css" rel="stylesheet"
         media="screen,projection" />
+
 </head>
 
 <body>
@@ -23,7 +22,6 @@
         <div class="nav-wrapper container">
             <a href="#" class="brand-logo">COVID-19 Tracker</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Countries</a></li>
                 <li><a href="badges.html">News</a></li>
                 <li><a href="collapsible.html">About Us</a></li>
             </ul>
@@ -33,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="input-field col s4">
-                <select>
+                <select id="select">
                     <option value="" disabled selected>Choose a country</option>
                     <option value="ar">Argentina</option>
                     <option value="au">Australia</option>
@@ -91,26 +89,37 @@
             </div>
         </div>
 
-        <!--container for covid stats-->
-        <div id="stats-container">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula
-            sem pulvinar odio sodales, pellentesque interdum purus dictum. Etiam eu
-            fringilla turpis, eu semper augue. In enim massa, sollicitudin ultricies
-            convallis non, rhoncus in neque. Phasellus fringilla ipsum quis dui rutrum
-            viverra. Curabitur vitae viverra nisi. Fusce orci mi, euismod ut diam nec,
-            efficitur vulputate leo. Integer faucibus nulla eget neque semper malesuada.
-            Vivamus elementum quam ac nunc interdum, sed elementum ipsum egestas. Integer
-            imperdiet auctor dui, sed posuere nibh scelerisque eu. Proin nisl neque, volutpat in leo
-            pharetra, porttitor aliquet enim. Nunc in sem congue neque iaculis posuere. Mauris
-            finibus elementum placerat. Nullam efficitur porta orci, vitae interdum mi convallis
-            semper. Sed non interdum libero, non iaculis nisl. Donec tristique felis quis eleifend
-            euismod. Vestibulum nec metus vitae dui convallis posuere. Nam dictum vel sapien eget
-            pellentesque. Morbi vel metus nec purus iaculis congue. Cras vulputate efficitur semper.
-            Fusce aliquet auctor nunc ac hendrerit. Interdum et malesuada fames ac ante ipsum primis
-            in faucibus. Sed vitae nisi ac lacus dapibus varius. Donec mollis quam vel magna pretium
-            varius id vitae dui.
-        </div>
+    </div>
 
+    <!--container for covid stats -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col s6 m4">
+                <div class="stats-block">
+                    <h5 class="center">CONFIRMED</h5>
+
+                    <p class="light center" id="confirmed-number">Loading…</p>
+                </div>
+            </div>
+
+            <div class="col s6 m4">
+                <div class="stats-block">
+                    <h5 class="center">DEATHS</h5>
+
+                    <p class="light center" id="dead-number">Loading…</p>
+                </div>
+            </div>
+
+            <div class="col s6 m4">
+                <div class="stats-block">
+                    <h5 class="center">RECOVERED</h5>
+
+                    <p class="light center" id="recovered-number">Loading…</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <!--container for news article cards-->
@@ -121,9 +130,9 @@
                 <div id="news1" class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center">COVID NEWS 1</h5>
+                    <h5 id="newstitle1" class="center">COVID NEWS 1</h5>
 
-                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                    <p id="newstext1" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
                 </div>
             </div>
 
@@ -131,9 +140,9 @@
                 <div id="news2" class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center">COVID NEWS 2</h5>
+                    <h5 id="newstitle2" class="center">COVID NEWS 2</h5>
 
-                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                    <p id="newstext2" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
                 </div>
             </div>
 
@@ -141,9 +150,9 @@
                 <div id="news3" class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center">COVID NEWS 3</h5>
+                    <h5 id="newstitle3" class="center">COVID NEWS 3</h5>
 
-                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                    <p id="newstext3" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
                 </div>
             </div>
 
@@ -151,9 +160,9 @@
                 <div id="news4" class="icon-block">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center">COVID NEWS 4</h5>
+                    <h5 id="newstitle4" class="center">COVID NEWS 4</h5>
 
-                    <p class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+                    <p id="newstext4" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
                 </div>
             </div>
 
@@ -166,16 +175,25 @@
                 <div class="col l6 s12">
                     <h5 class="white-text">Team Overview</h5>
                     <p class="grey-text text-lighten-4">
-                        We are a team of students in the Berkeley Software Development Bootcamp. This site leverages HTML, CSS, jQuery, and Materialize.
+                        We are a team of students in the Berkeley Software Development Bootcamp.
+                        <br><br>
+                        This site leverages HTML, CSS, jQuery, and Materialize.
                     </p>
                 </div>
-                <div class="col l6 s12">
+                <div class="col l6 s12 right-align">
                     <h5 class="white-text">Connect</h5>
                     <ul>
-                        <li><a class="white-text" href="https://www.linkedin.com/in/mike-ebener-6b08557b" target="_blank">Mike Ebener</a></li>
-                        <li><a class="white-text" href="https://www.linkedin.com/in/ben-gerner-790683208" target="_blank">Ben Gerner</a></li>
-                        <li><a class="white-text" href="https://www.linkedin.com/in/obinna-ezeka-000734206" target="_blank">Obinna Ezeka</a></li>
-                        <li><a class="white-text" href="https://www.linkedin.com/in/jefffollestad" target="_blank">Jeff Follestad</a></li>
+                        <li><a class="white-text"
+                                href="https://www.linkedin.com/in/mike-ebener-6b08557b"
+                                target="_blank">Mike Ebener</a></li>
+                        <li><a class="white-text"
+                                href="https://www.linkedin.com/in/ben-gerner-790683208"
+                                target="_blank">Ben Gerner</a></li>
+                        <li><a class="white-text"
+                                href="https://www.linkedin.com/in/obinna-ezeka-000734206"
+                                target="_blank">Obinna Ezeka</a></li>
+                        <li><a class="white-text" href="https://www.linkedin.com/in/jefffollestad"
+                                target="_blank">Jeff Follestad</a></li>
                     </ul>
                 </div>
             </div>
@@ -188,6 +206,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/api_calls.js"></script>
     <script src="./assets/js/script.js"></script>
 
 </body>

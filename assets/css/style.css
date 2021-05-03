@@ -27,6 +27,10 @@
   max-height: 300px;
 }
 
+.keyboard-focused {
+  color: black !important;
+}
+
 .page-footer a:hover {
   text-decoration: underline;
 }
