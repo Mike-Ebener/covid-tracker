@@ -27,7 +27,7 @@ var getNews = function (event) {
     var newsUrl = "http://api.mediastack.com/v1/news" +
         "?access_key=" + newsApiKey +
         "&countries=" + select.value +
-        "&limit=4";
+        "&limit=4&keywords=covid";
 fetch(newsUrl).then(function (response) {
     if (response.ok) {
         response.json().then(function (newsData) {
@@ -36,13 +36,13 @@ fetch(newsUrl).then(function (response) {
             for (let i = 0; i < newsData.data.length; i++) {
                 newsArray[i].innerText = "";
                 var newsContentHolder = document.createElement('a');
-                newsContentHolder.setAttribute("src", newsData.data[i].url)
+                newsContentHolder.setAttribute("src", newsData.data[i].url);
                 var flag = document.createElement('img');
                 flag.setAttribute("src", "https://www.countryflags.io/" + select.value + "/flat/64.png");
                 newsContentHolder.appendChild(flag);
-                newsTitleArray[i].textContent = newsData.data[i].title
+                newsTitleArray[i].textContent = newsData.data[i].title;
                 newsContentHolder.appendChild(newsTitleArray[i]);
-                newsTextArray[i].textContent = newsData.data[i].source
+                newsTextArray[i].textContent = newsData.data[i].source;
                 newsContentHolder.appendChild(newsTextArray[i]);
                 newsArray[i].appendChild(newsContentHolder);
                 // add classes to newly created html elements
