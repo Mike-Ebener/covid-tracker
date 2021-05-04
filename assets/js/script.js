@@ -28,33 +28,30 @@ var getNews = function (event) {
         "?access_key=" + newsApiKey +
         "&countries=" + select.value +
         "&limit=4&keywords=covid";
-fetch(newsUrl).then(function (response) {
-    if (response.ok) {
-        response.json().then(function (newsData) {
-            console.log(newsData);
 
-            for (let i = 0; i < newsData.data.length; i++) {
-                newsArray[i].innerText = "";
-                var newsContentHolder = document.createElement('a');
-                newsContentHolder.setAttribute("src", newsData.data[i].url);
-                var flag = document.createElement('img');
-                flag.setAttribute("src", "https://www.countryflags.io/" + select.value + "/flat/64.png");
-                newsContentHolder.appendChild(flag);
-                newsTitleArray[i].textContent = newsData.data[i].title;
-                newsContentHolder.appendChild(newsTitleArray[i]);
-                newsTextArray[i].textContent = newsData.data[i].source;
-                newsContentHolder.appendChild(newsTextArray[i]);
-                newsArray[i].appendChild(newsContentHolder);
-                // add classes to newly created html elements
-                // make link work
-            }
-        })
-    } else {
-        // TODO show error on the webpage instead of a alert?
-        alert("Failed to get news!");
-    }
-});
- 
+    fetch(newsUrl).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (newsData) {
+                console.log(newsData);
+
+                for (let i = 0; i < newsData.data.length; i++) {
+                    newsArray[i].innerText = "";
+                    var newsContentHolder = document.createElement('a');
+                    newsContentHolder.setAttribute("src", newsData.data[i].url)
+                    var flag = document.createElement('img');
+                    flag.setAttribute("src", "https://www.countryflags.io/" + select.value + "/flat/64.png");
+                    newsContentHolder.appendChild(flag);
+                    newsTitleArray[i].textContent = newsData.data[i].title
+                    newsContentHolder.appendChild(newsTitleArray[i]);
+                    newsTextArray[i].textContent = newsData.data[i].source
+                    newsContentHolder.appendChild(newsTextArray[i]);
+                    newsArray[i].appendChild(newsContentHolder);
+                    // add classes to newly created html elements
+                    // make link work
+                }
+            })
+        }
+    });
 }
 
 // Covid API starter
@@ -64,7 +61,7 @@ function getConfirmed(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
         var sumOfConfirmed = 0;
 
-        for(var i = 0; i < response.length; i++) {
+        for (var i = 0; i < response.length; i++) {
 
             sumOfConfirmed += response[i].Confirmed;
         }
@@ -77,7 +74,7 @@ function getDeaths(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
         var sumOfDeaths = 0;
 
-        for(var i = 0; i < response.length; i++) {
+        for (var i = 0; i < response.length; i++) {
 
             sumOfDeaths += response[i].Deaths;
         }
@@ -91,7 +88,7 @@ function getRecovered(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/recovered', (response) => {
         var sumOfRecovered = 0;
 
-        for(var i = 0; i < response.length; i++) {
+        for (var i = 0; i < response.length; i++) {
 
             sumOfRecovered += response[i].Recovered;
         }
@@ -114,6 +111,6 @@ $(document).ready(function () {
     countryDropdown.formSelect();
     countryDropdown.change(onCountryDropdownSelection);
 
-// document.addEventListener('input', getNews);
+    // document.addEventListener('input', getNews);
 
 });
