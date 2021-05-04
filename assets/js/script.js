@@ -59,7 +59,7 @@ fetch(newsUrl).then(function (response) {
 
 // Covid API starter
 
-/** confirmed cases function */
+/** confirmed cases function - working */
 function getConfirmed(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
         var sumOfConfirmed = 0;
@@ -72,7 +72,7 @@ function getConfirmed(country) {
     });
 }
 
-/** confirmed deaths function */
+/** confirmed deaths function - working */
 function getDeaths(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
         var sumOfDeaths = 0;
@@ -115,5 +115,5 @@ $(document).ready(function () {
     countryDropdown.change(onCountryDropdownSelection);
 
 // document.addEventListener('input', getNews);
-=======
+
 });
