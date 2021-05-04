@@ -7,16 +7,16 @@
  * Made By MaterializeCSS.com
  */
 
-.icon-block {
+.news-block {
   padding: 0 15px;
 }
 
-.icon-block .material-icons {
+.news-block .material-icons {
   font-size: inherit;
 }
 
-.brand-logo .material-icons {
-  font-size: 56px !important;
+.brand-logo {
+  font-size: 40px !important;
 }
 
 .input-field {

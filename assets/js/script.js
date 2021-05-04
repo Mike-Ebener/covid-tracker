@@ -1,9 +1,9 @@
 const newsApiKey = "be3c3658dbb343423bac4e9c46b209e9";
 
 function getNews(country) {
-    const newsUrl = "http://api.mediastack.com/v1/news" +
+    const newsUrl = "http://api.mediastack.com/v1/" +
         "?access_key=" + newsApiKey +
-        "&countries=" + country +
+        "&countries=" + "&keywords= virus,-corona" + country +
         "&limit=5&languages=en,-ar,-zh,-de,-it,-ru,-nl,-es,-fr,-no,-pt";
 
     makeApiRequest(newsUrl, (response) => {
@@ -13,6 +13,7 @@ function getNews(country) {
             // create html elements to be appended
             // add classes to newly created html elements
             // add attributes to newly created html elements ()
+            $("#news-text-1").text()
         }
     });
 }
