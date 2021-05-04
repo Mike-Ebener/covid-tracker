@@ -61,13 +61,7 @@ var getNews = function (event) {
 function getConfirmed(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
         var sumOfConfirmed = 0;
-
         for (var i = 0; i < response.length; i++) {
-
-
-        for (var i = 0; i < response.length; i++) {
-
-
             sumOfConfirmed += response[i].Confirmed;
         }
         $("#confirmed-number").text(sumOfConfirmed.toLocaleString());
@@ -78,30 +72,18 @@ function getConfirmed(country) {
 function getDeaths(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
         var sumOfDeaths = 0;
-
         for (var i = 0; i < response.length; i++) {
-
-
-        for (var i = 0; i < response.length; i++) {
-
             sumOfDeaths += response[i].Deaths;
         }
         $("#dead-number").text(sumOfDeaths.toLocaleString());
     });
 };
 
-
 /** confirmed recovered function */
 function getRecovered(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/recovered', (response) => {
         var sumOfRecovered = 0;
-
         for (var i = 0; i < response.length; i++) {
-
-
-        for (var i = 0; i < response.length; i++) {
-
-
             sumOfRecovered += response[i].Recovered;
         }
         $("#recovered-number").text(sumOfRecovered.toLocaleString());
@@ -135,10 +117,4 @@ $(document).ready(function () {
     countryDropdown.formSelect();
 
     refreshData();
-
-    countryDropdown.change(onCountryDropdownSelection);
-
-    // document.addEventListener('input', getNews);
-
-
 });
