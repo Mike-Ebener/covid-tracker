@@ -28,6 +28,7 @@ var getNews = function (event) {
         "?access_key=" + newsApiKey +
         "&countries=" + select.value +
         "&limit=4&keywords=covid";
+
     fetch(newsUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (newsData) {
@@ -51,12 +52,11 @@ var getNews = function (event) {
             })
         }
     });
-
 }
 
 // Covid API starter
 
-/** confirmed cases function */
+/** confirmed cases function - working */
 function getConfirmed(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
         var sumOfConfirmed = 0;
@@ -69,7 +69,7 @@ function getConfirmed(country) {
     });
 }
 
-/** confirmed deaths function */
+/** confirmed deaths function - working */
 function getDeaths(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
         var sumOfDeaths = 0;
