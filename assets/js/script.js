@@ -38,7 +38,7 @@ var getNews = function (event) {
                 for (let i = 0; i < newsData.data.length; i++) {
                     newsArray[i].innerText = "";
                     var newsContentHolder = document.createElement('a');
-                    newsContentHolder.setAttribute("src", newsData.data[i].url)
+                    newsContentHolder.setAttribute("href", newsData.data[i].url)
                     var flag = document.createElement('img');
                     flag.setAttribute("src", "https://www.countryflags.io/" + select.value + "/flat/64.png");
                     newsContentHolder.appendChild(flag);
