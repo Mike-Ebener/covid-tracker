@@ -38,7 +38,7 @@ var getNews = function (event) {
                 for (let i = 0; i < newsData.data.length; i++) {
                     newsArray[i].innerText = "";
                     var newsContentHolder = document.createElement('a');
-                    newsContentHolder.setAttribute("src", newsData.data[i].url)
+                    newsContentHolder.setAttribute("href", newsData.data[i].url)
                     var flag = document.createElement('img');
                     flag.setAttribute("src", "https://www.countryflags.io/" + select.value + "/flat/64.png");
                     newsContentHolder.appendChild(flag);
@@ -61,13 +61,7 @@ var getNews = function (event) {
 function getConfirmed(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/confirmed', (response) => {
         var sumOfConfirmed = 0;
-
         for (var i = 0; i < response.length; i++) {
-
-
-        for (var i = 0; i < response.length; i++) {
-
-
             sumOfConfirmed += response[i].Confirmed;
         }
         $("#confirmed-number").text(sumOfConfirmed.toLocaleString());
@@ -78,30 +72,18 @@ function getConfirmed(country) {
 function getDeaths(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
         var sumOfDeaths = 0;
-
         for (var i = 0; i < response.length; i++) {
-
-
-        for (var i = 0; i < response.length; i++) {
-
             sumOfDeaths += response[i].Deaths;
         }
         $("#dead-number").text(sumOfDeaths.toLocaleString());
     });
 };
 
-
 /** confirmed recovered function */
 function getRecovered(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/recovered', (response) => {
         var sumOfRecovered = 0;
-
         for (var i = 0; i < response.length; i++) {
-
-
-        for (var i = 0; i < response.length; i++) {
-
-
             sumOfRecovered += response[i].Recovered;
         }
         $("#recovered-number").text(sumOfRecovered.toLocaleString());
@@ -133,12 +115,5 @@ $(document).ready(function () {
     });
     countryDropdown.val(getStoredCountryCode());
     countryDropdown.formSelect();
-
     refreshData();
-
-    countryDropdown.change(onCountryDropdownSelection);
-
-    // document.addEventListener('input', getNews);
-
-
 });

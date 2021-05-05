@@ -17,8 +17,9 @@
 
 </head>
 
-<body> 
-    <nav class="light-blue darken-4" role="navigation"> <!--navigation-->
+<body>
+    <nav class="light-blue darken-4" role="navigation">
+        <!--navigation-->
         <div class="nav-wrapper container">
             <a href="#" class="brand-logo">COVID-19 Tracker</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -28,7 +29,8 @@
         </div>
     </nav>
 
-    <div class="container"> <!--drop-down-->
+    <div class="container">
+        <!--drop-down-->
         <div class="row">
 
             <div class="input-field col s4">
@@ -95,95 +97,78 @@
 
     <!--container for covid stats for confirmed, deaths and recovered -->
     <div class="container">
-
+       
         <div class="row">
-
-            <div class="col s6 m4">
-                <div class="stats-block z-depth-2">
-
-                    <h5 class="center">CONFIRMED</h5>
-
-                    <h6 class="center orange-text" id="confirmed-number">Cases Confirmed</h6>
-                </div>
-            </div>
-
-
-            <div class="col s6 m4">
-                <div class="stats-block z-depth-2">
-
-                    <h5 class="center">DEATHS</h5>
-
-                    <h6 class="center red-text" id="dead-number">COVID-19 Deaths</h6>
-                </div>
-            </div>
-
-
-            <div class="col s12 m4">
+            <div class="col l4 m4 s12">
                 <div class="stats-block">
-
-            <div class="col s6 m4">
-                <div class="stats-block z-depth-2">
-
-                    <h5 class="center">RECOVERED</h5>
-
-                    <h6 class="center green-text" id="recovered-number">Recovered</h6>
+                    <h5 class="center">CONFIRMED</h5>
+                    <h5 class="center orange-text" id="confirmed-number">Cases Confirmed</h5>
                 </div>
             </div>
 
+            <div class="col l4 m4 s12">
+                <div class="stats-block">
+                    <h5 class="center">DEATHS</h5>
+                    <h5 class="center red-text" id="dead-number">COVID-19 Deaths</h5>
+                </div>
+            </div>
+
+            <div class="col l4 m4 s12">
+                <div class="stats-block">
+                    <h5 class="center">RECOVERED</h5>
+                    <h5 class="center green-text" id="recovered-number">Recovered</h5>
+                </div>
+            </div>
         </div>
+
     </div>
+
 
     <!--container for news article cards-->
     <div class="container">
+        
         <div class="row">
-            <div class="col s6 m3">
 
-                <div id="news1" class="icon-block center z-depth-2">
-                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
-                    </h2>
-                    <h5 id="newstitle1" class="center">COVID NEWS 1</h5>
-
-                    <p id="newstext1" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
-
+            <div class="col l3 m3 s6">
+                <div class="card">
+                <div id="news1" class="news-block center z-depth-2">
+                    <h5 id="newstitle1" class="center">NEWS 1</h5>
+                    <p id="newstext1" class="truncate">COVID-19 News by Country</p>
                 </div>
             </div>
-
-            <div class="col s6 m3">
-
-                <div id="news2" class="icon-block center z-depth-2">
-                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
-                    </h2>
-                    <h5 id="newstitle2" class="center">COVID NEWS 2</h5>
-
-                    <p id="newstext2" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
-                </div>
             </div>
 
-            <div class="col s6 m3">
-
-                <div id="news3" class="icon-block center z-depth-2">
-                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
-                    </h2>
-                    <h5 id="newstitle3" class="center">COVID NEWS 3</h5>
-
-                    <p id="newstext3" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
-
+            <div class="col l3 m3 s6">
+                <div class="card">
+                <div id="news2" class="news-block center z-depth-2">
+                    <h5 id="newstitle2" class="center">NEWS 2</h5>
+                    <p id="newstext2" class="truncate">COVID-19 News by Country</p>
                 </div>
             </div>
+            </div>
 
-            <div class="col s6 m3">
-
-                <div id="news4" class="icon-block center z-depth-2">
-                    <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
-                    </h2>
-                    <h5 id="newstitle4" class="center">COVID NEWS 4</h5>
-
-                    <p id="newstext4" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+            <div class="col l3 m3 s6">
+                <div class="card">
+                <div id="news3" class="news-block center z-depth-2"> 
+                    <h5 id="newstitle3" class="center">NEWS 3</h5>
+                    <p id="newstext3" class="truncate">COVID-19 News by Country</p>
                 </div>
+            </div>
+            </div>
+
+            <div class="col l3 m3 s6">
+                <div class="card">
+                <div id="news4" class="news-block center z-depth-2">
+                    <h5 id="newstitle4" class="center">NEWS 4</h5>
+                    <p id="newstext4" class="truncate">COVID-19 News by Country</p>
+                </div>
+            </div>
             </div>
 
         </div>
     </div>
+
+
 
     <footer class="page-footer light-blue darken-4">
         <div class="container">

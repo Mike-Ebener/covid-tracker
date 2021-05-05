@@ -8,14 +8,10 @@
  */
 
 .news-block {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
-.news-block .material-icons {
-  font-size: inherit;
-}
-
-.brand-logo { 
+.brand-logo {
   font-size: 40px !important;
 }
 
