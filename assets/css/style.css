@@ -8,11 +8,7 @@
  */
 
 .news-block {
-  padding: 0 15px;
-}
-
-.news-block .material-icons {
-  font-size: inherit;
+  padding: 0 10px;
 }
 
 .brand-logo {
