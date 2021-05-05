@@ -23,6 +23,7 @@ var newsTextArray = [newstext1, newstext2, newstext3, newstext4];
 
 const newsApiKey = "be3c3658dbb343423bac4e9c46b209e9";
 
+
 var getNews = function (event) {
     var newsUrl = "http://api.mediastack.com/v1/news" +
         "?access_key=" + newsApiKey +
@@ -63,6 +64,10 @@ function getConfirmed(country) {
 
         for (var i = 0; i < response.length; i++) {
 
+
+        for (var i = 0; i < response.length; i++) {
+
+
             sumOfConfirmed += response[i].Confirmed;
         }
         $("#confirmed-number").text(sumOfConfirmed.toLocaleString());
@@ -73,6 +78,9 @@ function getConfirmed(country) {
 function getDeaths(country) {
     makeApiRequest('https://api.covid19api.com/live/country/' + country + '/status/deaths', (response) => {
         var sumOfDeaths = 0;
+
+        for (var i = 0; i < response.length; i++) {
+
 
         for (var i = 0; i < response.length; i++) {
 
@@ -90,27 +98,47 @@ function getRecovered(country) {
 
         for (var i = 0; i < response.length; i++) {
 
+
+        for (var i = 0; i < response.length; i++) {
+
+
             sumOfRecovered += response[i].Recovered;
         }
         $("#recovered-number").text(sumOfRecovered.toLocaleString());
     });
 };
 
-function onCountryDropdownSelection() {
-    const countryCode = $(this).val();
+function getStoredCountryCode() {
+    return localStorage.getItem("countryCode");
+}
+
+function refreshData() {
+    let countryCode = getStoredCountryCode();
+    if (countryCode == null) {
+        return;
+    }
     console.log(`Country selected: ${countryCode}`);
     getNews(countryCode);
     getConfirmed(countryCode);
     getDeaths(countryCode);
-    getRecovered(countryCode);
+    getRecovered(countryCode)
 }
 
 $(document).ready(function () {
     // Initializes select elements via Materialize.
     let countryDropdown = $("select");
+    countryDropdown.change(function () {
+        localStorage.setItem("countryCode", $(this).val());
+        refreshData();
+    });
+    countryDropdown.val(getStoredCountryCode());
     countryDropdown.formSelect();
+
+    refreshData();
+
     countryDropdown.change(onCountryDropdownSelection);
 
     // document.addEventListener('input', getNews);
+
 
 });
