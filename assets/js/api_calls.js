@@ -17,7 +17,7 @@ function makeApiRequest(url, success) {
       return response.json()
     })
     .then((data) => {
-      console.log(`Got data from ${url}: ${data}`);
+      //console.log(`Got data from ${url}: ${data}`);
       success(data);
     })
     .catch((error) => {
