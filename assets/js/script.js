@@ -115,6 +115,5 @@ $(document).ready(function () {
     });
     countryDropdown.val(getStoredCountryCode());
     countryDropdown.formSelect();
-
     refreshData();
 });
