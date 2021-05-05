@@ -30,8 +30,10 @@
 
     <div class="container"> <!--drop-down-->
         <div class="row">
-            <div class="input-field col s4"> <!--https://materializecss.com/text-inputs.html-->
-                <select>
+
+            <div class="input-field col s4">
+                <select id="select">
+
                     <option value="" disabled selected>Choose a country</option>
                     <option value="ar">Argentina</option>
                     <option value="au">Australia</option>
@@ -91,28 +93,37 @@
 
     </div>
 
-    <!--container for covid stats -->
+    <!--container for covid stats for confirmed, deaths and recovered -->
     <div class="container">
 
         <div class="row">
-            <div class="col s12 m4">
-                <div class="stats-block">
+
+            <div class="col s6 m4">
+                <div class="stats-block z-depth-2">
+
                     <h5 class="center">CONFIRMED</h5>
 
                     <h6 class="center orange-text" id="confirmed-number">Cases Confirmed</h6>
                 </div>
             </div>
 
-            <div class="col s12 m4">
-                <div class="stats-block">
+
+            <div class="col s6 m4">
+                <div class="stats-block z-depth-2">
+
                     <h5 class="center">DEATHS</h5>
 
                     <h6 class="center red-text" id="dead-number">COVID-19 Deaths</h6>
                 </div>
             </div>
 
+
             <div class="col s12 m4">
                 <div class="stats-block">
+
+            <div class="col s6 m4">
+                <div class="stats-block z-depth-2">
+
                     <h5 class="center">RECOVERED</h5>
 
                     <h6 class="center green-text" id="recovered-number">Recovered</h6>
@@ -126,42 +137,48 @@
     <div class="container">
         <div class="row">
             <div class="col s6 m3">
-                <div class="news-block">
+
+                <div id="news1" class="icon-block center z-depth-2">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center" id="news-title-1">NEWS 1</h5>
+                    <h5 id="newstitle1" class="center">COVID NEWS 1</h5>
 
-                    <p class="light center" id="news-text-1">COVID-19 News by Country</p>
+                    <p id="newstext1" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+
                 </div>
             </div>
 
             <div class="col s6 m3">
-                <div class="news-block">
+
+                <div id="news2" class="icon-block center z-depth-2">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center" id="news-title-2">NEWS 2</h5>
+                    <h5 id="newstitle2" class="center">COVID NEWS 2</h5>
 
-                    <p class="light center" id="news-text-2">COVID-19 News by Country</p>
+                    <p id="newstext2" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
                 </div>
             </div>
 
             <div class="col s6 m3">
-                <div class="news-block">
+
+                <div id="news3" class="icon-block center z-depth-2">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center" id="news-title-3">NEWS 3</h5>
+                    <h5 id="newstitle3" class="center">COVID NEWS 3</h5>
 
-                    <p class="light center" ide="news-text-3">COVID-19 News by Country</p>
+                    <p id="newstext3" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
+
                 </div>
             </div>
 
             <div class="col s6 m3">
-                <div class="news-block">
+
+                <div id="news4" class="icon-block center z-depth-2">
                     <h2 class="center light-blue-text"><i class="material-icons">coronavirus</i>
                     </h2>
-                    <h5 class="center" id="news-title-4">NEWS 4</h5>
+                    <h5 id="newstitle4" class="center">COVID NEWS 4</h5>
 
-                    <p class="light center" id="news-text-4">COVID-19 News by Country</p>
+                    <p id="newstext4" class="light">Lorem ipsum morem ipsum lorem ipsum.</p>
                 </div>
             </div>
 
