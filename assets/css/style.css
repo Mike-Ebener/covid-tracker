@@ -7,10 +7,6 @@
  * Made By MaterializeCSS.com
  */
 
-.news-block {
-  padding: 0 10px;
-}
-
 .brand-logo {
   font-size: 40px !important;
 }
@@ -21,6 +17,11 @@
 
 .dropdown-content {
   max-height: 300px;
+}
+
+.news-block {
+  padding: 0px 0px 0px 0px;
+ 
 }
 
 .keyboard-focused {
