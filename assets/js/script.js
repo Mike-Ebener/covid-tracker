@@ -21,7 +21,7 @@ var newsTitleArray = [newstitle1, newstitle2, newstitle3, newstitle4];
 
 var newsTextArray = [newstext1, newstext2, newstext3, newstext4];
 
-const newsApiKey = "be3c3658dbb343423bac4e9c46b209e9";
+const newsApiKey = "76668b85751e5b9a5734a334bc164c68";
 
 
 var getNews = function (event) {
